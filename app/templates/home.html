@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pokemons - Pokedex</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+
+    <header>
+
+        <h1>Pokemons</h1>
+
+
+        <h3>Buscador de nome pokemon:</h3>
+        <form action="{{ url_for('pokemons') }}" method="GET">
+            <input type="text" name="nome">
+            <button type="submit"><strong>Buscar</strong></button>
+        </form>
+    </header>
+
+
+    <main>
+
+        <ul>
+            {% for pokemon in pokemons %}
+            <li>
+
+                <a href="{{ url_for('pokemon', id=pokemon.id) }}">
+                    {{ pokemon.nome }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+
+        {% if pokemon %}
+        <script>
+            window.location.href = "{{ url_for('pokemon', id=pokemon.id) }}";
+        </script>
+        {% endif %}
+    </main>
+</body>
+</html>

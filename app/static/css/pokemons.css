@@ -1,0 +1,90 @@
+body {
+margin: 20;
+padding: 0;
+font-family: Arial, sans-serif;
+font-size: 25px;
+}
+
+label {
+    padding: 10px;
+    display: flex;
+}
+
+input {
+    width: 500px;
+}
+html {
+background:#f44336;
+}
+
+header {
+text-align: center;
+background:#f44336;
+color: #ebeaea;
+padding: 20px;
+border-radius: 5px 5px 0px 0px;
+}
+
+header h1 {
+margin: 0;
+font-size: 36px;
+text-align: center;
+}
+
+header form {
+display: flex;
+justify-content: center;
+margin-top: 20px;
+}
+
+header form label {
+margin-right: 10px;
+font-size: 18px;
+font-weight: bold;
+}
+
+header form input[type="text"] {
+padding: 5px;
+font-size: 16px;
+border-radius: 5px 0 0 5px;
+border: 2px solid #cecece;
+outline: none;
+}
+
+header form button[type="submit"] {
+padding: 5px 10px;
+font-size: 16px;
+border-radius: 0px 5px 5px 0px;
+}
+
+img {
+width: 400px;
+height: 400px;
+border-radius: 30px;
+}
+
+.pokemon-image-container {
+text-align: center;
+background-color: antiquewhite;
+border-radius: 30px;
+padding: 50px;
+}
+
+main {
+background-color:  #f44336;
+color: #f1f1f1;
+padding: 50px;
+border-radius: 0px 0px 5px 5px;
+}
+
+.container-todo {
+background-color:  #f44336;
+}
+
+.busca {
+background-color: rgb(226, 226, 226);
+border-radius: 30px;
+width: 300px;
+text-align: center;
+}
+    

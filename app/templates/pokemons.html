@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ pokemon.nome }} - Pokedex</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/pokemons.css') }}">
+</head>
+<body>
+    <header>
+        <h1>{{ pokemon.nome }}</h1>
+    </header>
+
+    <div class="pokemon-image-container">
+        <img src="{{ pokemon.image }}" alt="{{ pokemon.nome }}">
+    </div>
+
+    <main>
+        <h2>Detalhes do Pokémon</h2>
+        <ul>
+            <li><strong>Tipo:</strong> {{ pokemon.tipo }}</li>
+            <li><strong>Descrição:</strong> {{ pokemon.descricao }}</li>
+            <li><strong>HP:</strong> {{ pokemon.hp }}</li>
+            <li><strong>Região:</strong> {{ pokemon.regiao }}</li>
+        </ul>
+    </main>
+</body>
+</html>
